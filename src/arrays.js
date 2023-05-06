@@ -7,13 +7,11 @@ const getNthElement = (index, array) => {
 };
 
 const arrayToCSVString = array => {
-  let csvString = array.join(",");
-  return csvString;
+  return array.join(",");
 };
 
 const csvStringToArray = string => {
-  let anArray = string.split(",");
-  return anArray;
+  return string.split(",");
 };
 
 const addToArray = (element, array) => {
@@ -55,7 +53,7 @@ const elementsStartingWithAVowel = strings => {
 };
 
 const removeSpaces = string => {
-  let array= string.split(" ")
+  const array= string.split(" ")
   array.filter(item => item.trim());
   string = array.join("");
   return string;
@@ -63,7 +61,7 @@ const removeSpaces = string => {
 
 const sumNumbers = numbers => {
   let sum = 0;
-  numbers.forEach(item => sum += item);
+  numbers.forEach(item => {sum += item});
   return sum;
 };
 

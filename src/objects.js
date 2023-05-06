@@ -15,7 +15,7 @@ const getProperty = (property, object) => {
 };
 
 const hasProperty = (property, object) => {
-  return object.hasOwnProperty(property);
+  return Object.hasOwn(object, property);
 };
 
 const isOver65 = person => {
@@ -23,27 +23,28 @@ const isOver65 = person => {
 };
 
 const getAges = people => {
-return people.map(person => person.age);
+  return people.map(person => person.age);
 };
 
 const findByName = (name, people) => {
-return people.find(person => person.name === name);
+  return people.find(person => person.name === name);
 };
 
 const findHondas = cars => {
-return cars.filter(car => car.manufacturer === "Honda");
+  return cars.filter(car => car.manufacturer === "Honda");
 };
 
 const averageAge = people => {
-let age = people.reduce((previousAge, currentAge) => {
+const age = people.reduce((previousAge, currentAge) => {
   return previousAge + currentAge.age;}, 0 );
 
 return age / people.length; 
 };
 
 const createTalkingPerson = (name, age) => {
-function introduce(name2) {
-  return `Hi ${name2}, my name is ${name} and I am ${age}!`; }
+  function introduce(name2) {
+    return `Hi ${name2}, my name is ${name} and I am ${age}!`; 
+  }
 
   return {
     name, 

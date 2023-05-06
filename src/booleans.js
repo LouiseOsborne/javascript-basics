@@ -35,11 +35,11 @@ function isLessThanOrEqualTo(a, b) {
 };
 
 function isOdd(a) {
-  return a%2 !== 0;
+  return a % 2 !== 0;
 };
 
 function isEven(a) {
-  return a% 2 ==0 ;
+  return a % 2 === 0 ;
 };
 
 function isSquare(a) {
@@ -60,7 +60,7 @@ function containsVowels(string) {
   } ;
 
 function isLowerCase(string) {
-return (string.toLowerCase() === string);
+  return string.toLowerCase() === string;
 };
 
 module.exports = {
